@@ -2,7 +2,7 @@ FROM httpd:2.4
 COPY ./public-html/ /usr/local/apache2/htdocs/
 MAINTAINER ossiemarks
 RUN apt-get -y update
-RUN apt-get install -y httpd
+RUN apt-get install -y apache2
 WORKDIR /tmp/apache
 RUN git clone http://github.com/ossiemarks/apache_ssl.git /tmp/apache
 COPY ./public-html/ /usr/local/apache2/htdocs/
